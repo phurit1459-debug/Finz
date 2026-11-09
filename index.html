@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our 7 Months ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600&family=Itim&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mali', cursive;
+    min-height: 100vh;
+    color: #754b48;
+    overflow-x: hidden;
+    background: linear-gradient(
+        180deg,
+        #f7a477 0%,
+        #ffc69d 35%,
+        #f9d5ae 60%,
+        #dca77c 100%
+    );
+}
+
+/* พระอาทิตย์ */
+.sun {
+    position: fixed;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #fff0bb;
+    box-shadow: 0 0 80px 30px #ffe1a2;
+    top: 13%;
+    right: 15%;
+    z-index: 0;
+}
+
+/* ภูเขา */
+.mountain {
+    position: fixed;
+    bottom: 25%;
+    width: 100%;
+    height: 200px;
+    background: #a87c72;
+    clip-path: polygon(0 100%, 0 65%, 20% 20%,
+    38% 75%, 60% 10%, 80% 70%, 100% 25%, 100% 100%);
+    opacity: .65;
+}
+
+.mountain2 {
+    position: fixed;
+    bottom: 20%;
+    width: 100%;
+    height: 180px;
+    background: #8e7961;
+    clip-path: polygon(0 100%, 0 45%, 25% 75%,
+    50% 20%, 75% 75%, 100% 40%, 100% 100%);
+    opacity: .7;
+}
+
+/* ทุ่งดอกไม้ */
+.field {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background:
+    radial-gradient(ellipse at 20% 30%, #f9c0a0 2px, transparent 5px),
+    radial-gradient(ellipse at 60% 20%, #ffe3b7 3px, transparent 6px),
+    radial-gradient(ellipse at 80% 60%, #e9a0a2 3px, transparent 7px),
+    linear-gradient(180deg, #788c54, #405d3d);
+    background-size: 35px 35px, 50px 50px, 45px 45px, auto;
+    z-index: 0;
+}
+
+/* ดอกไม้ */
+.flower {
+    position: fixed;
+    bottom: -10px;
+    font-size: 28px;
+    animation: sway 3s ease-in-out infinite alternate;
+    z-index: 1;
+}
+
+@keyframes sway {
+    from { transform: rotate(-12deg); }
+    to { transform: rotate(12deg); }
+}
+
+/* เนื้อหาหลัก */
+.container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 15px;
+}
+
+.card {
+    max-width: 650px;
+    width: 100%;
+    padding: 35px 28px;
+    background: rgba(255, 248, 232, .92);
+    border: 2px solid rgba(255,255,255,.8);
+    border-radius: 25px;
+    box-shadow: 0 15px 60px #754b4840;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.top-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(40px, 9vw, 65px);
+    color: #c56e68;
+    text-shadow: 2px 3px 5px #dcae9a;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #a47769;
+}
+
+.heart {
+    font-size: 45px;
+    animation: beat 1.3s infinite;
+    margin: 10px;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.divider {
+    margin: 20px auto;
+    width: 70%;
+    border-top: 1px solid #dba69a;
+    position: relative;
+}
+
+.divider::after {
+    content: "♡";
+    position: absolute;
+    background: #fff8e8;
+    padding: 0 12px;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #c56e68;
+    font-size: 20px;
+}
+
+.counter {
+    margin: 20px 0;
+    padding: 18px;
+    background: #fce5d7;
+    border-radius: 18px;
+}
+
+.counter h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 42px;
+    color: #c56e68;
+}
+
+.counter p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.message {
+    line-height: 2.1;
+    font-size: 14px;
+    text-align: left;
+    color: #79534b;
+}
+
+.message p {
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background: #f9d4ce;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+    color: #b75f68;
+    font-size: 16px;
+    margin: 18px 0;
+}
+
+button {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #d98281, #e9a5a0);
+    color: white;
+    font-family: 'Mali', cursive;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #bd777755;
+    transition: .3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+#letter {
+    display: none;
+    margin-top: 20px;
+    animation: appear 1s;
+}
+
+.footer {
+    margin-top: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    color: #c56e68;
+}
+
+/* หัวใจลอย */
+.floating {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    z-index: 10;
+    animation: floatUp 7s linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    .card {
+        padding: 28px 18px;
+    }
+
+    .message {
+        font-size: 13px;
+    }
+
+    .sun {
+        width: 120px;
+        height: 120px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="sun"></div>
+<div class="mountain"></div>
+<div class="mountain2"></div>
+<div class="field"></div>
+
+<div class="container">
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1 class="top-text">Happy 7 Months</h1>
+
+    <p class="subtitle">
+        A beautiful journey with you ♡
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="counter">
+        <h2>7 Months</h2>
+        <p>ขอบคุณที่อยู่ด้วยกันมาจนครบ 7 เดือนนะอ้วน 🌷</p>
+    </div>
+
+    <div class="message">
+
+        <p>
+        วันนี้ก็เป็นวันครบรอบที่เราอยู่ด้วยกันมาตั้ง 7 เดือนแล้ว
+        เค้าดีใจมากเลย เค้าแฮปปี้ที่มีอ้วนอยู่ด้วยในทุกเทศกาล
+        ทุกอย่างในชีวิตของเค้าเลย
+        </p>
+
+        <p>
+        แล้วเค้าก็อยากมีอ้วนอยู่แบบนี้ไปนาน ๆ
+        เค้าดีใจมากที่เรายังอยู่ด้วยกัน
+        ที่เรายังพยายามช่วยประคับประคองรักษากันไว้
+        ขอบคุณที่เราพยายามเข้าใจกันในหลาย ๆ เรื่อง
+        </p>
+
+        <p>
+        เค้าอาจจะทำตัวแย่หรืออาจจะทำนิสัยไม่ดีใส่อ้วน
+        เค้าก็ขอโทษด้วยนะครับ
+        แต่ว่านะ เค้านี่รักอ้วนมาก ๆ เลยนะ
+        </p>
+
+        <div class="highlight">
+            เค้าคิดถึงหมู ๆ ของเค้าทุกวันเลยด้วย ♡
+        </div>
+
+        <p>
+        หมูโระ หมูตุ๋น หมูฟิ้น มีหมูตั้ง 3 ตัวแหนะ
+        กินก็เยอะ อ้วนก็อ้วนน่ากอดน่าฟัดจริง ๆ
+        ไหน ๆ เค้าขอหอมตูดโหน่ย
+        </p>
+
+        <p>
+        เค้าคิดถึงอ้วนนะ คิดถึง ๆ ๆ ๆ
+        จุ๊บแก้มนะ มั๊ว มั๊ว มั๊ว 💋
+        </p>
+
+        <p>
+        เค้าไม่รู้จะพิมอะไรแล้วอะ แต่เค้าตอนแรกนะ
+        จะทำอีกแบบให้เธอ แต่สายมันมีไม่ครบ
+        เค้าไม่รู้จะต่อยังไงนิ เสียจัย ๆ
+        เค้าเลยมาทำแบบนี้ให้ตุ้ยแทน
+        </p>
+
+        <p>
+        เค้ารักอ้วนนะ คิดถึงอ้วน รักมากเลยด้วย
+        ฟิ้นก็ทำหน้าที่ของตัวเองให้เต็มที่นะ
+        เค้าจะคอยเป็นกำลังใจ คอยซัพพอร์ตตุ้ยอยู่ตรงนี้เอง
+        </p>
+
+        <p>
+        มีอะไรก็มาบอกเค้าได้ตลอดเลยนะ
+        เค้าจะรับฟังอ้วนทุกเรื่องเลย
+        อ้วน ๆ จะบ่นอะไรให้เค้าฟังนะ เค้าก็ฟังได้หมดเลย
+        เรื่องชาวบ้านเค้านี่ช๊อบชอบ หุหุ 🤭
+        </p>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <button onclick="surprise()">
+        💌 กดรับความรักจากเค้า
+    </button>
+
+    <div id="letter">
+        <h2 style="color:#c56e68;">รักอ้วนที่สุดเลยนะ ❤️</h2>
+        <br>
+        <p>ขอให้เราอยู่ด้วยกันไปนาน ๆ</p>
+        <p>ขอให้มีเราในทุกเทศกาลต่อจากนี้</p>
+        <p>และขอให้ทุ่งดอกไม้แห่งนี้มีเราเสมอ 🌷</p>
+        <br>
+        <h2>รักนะ จุ๊บ ๆ 💗</h2>
+    </div>
+
+    <div class="footer">
+        Forever & Always ♡
+    </div>
+
+    <p style="font-size:12px;margin-top:12px;color:#bd9385;">
+        Made with love, just for you.
+    </p>
+
+</div>
+</div>
+
+<script>
+
+// สร้างดอกไม้ตกแต่ง
+const flowers = ["🌸","🌷","🌼","🌺","💐"];
+
+for(let i=0;i<35;i++){
+    let f = document.createElement("div");
+    f.className = "flower";
+    f.innerHTML = flowers[Math.floor(Math.random()*flowers.length)];
+    f.style.left = Math.random()*100+"%";
+    f.style.fontSize = (18+Math.random()*22)+"px";
+    f.style.animationDelay = Math.random()*3+"s";
+    document.body.appendChild(f);
+}
+
+// ปุ่มเซอร์ไพรส์
+function surprise(){
+
+    const letter = document.getElementById("letter");
+
+    if(letter.style.display === "block") return;
+
+    letter.style.display = "block";
+
+    // ปล่อยหัวใจ
+    for(let i=0;i<50;i++){
+        setTimeout(createHeart,i*100);
+    }
+}
+
+// เอฟเฟกต์หัวใจ
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "floating";
+    heart.innerHTML = ["❤️","💕","💗","🌸","💖"][
+        Math.floor(Math.random()*5)
+    ];
+
+    heart.style.left = Math.random()*100+"vw";
+    heart.style.fontSize = (15+Math.random()*25)+"px";
+    heart.style.animationDuration = (4+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+// หัวใจลอยตลอดเวลา
+setInterval(createHeart,1200);
+
+</script>
+
+</body>
+</html>
